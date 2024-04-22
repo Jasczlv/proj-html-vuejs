@@ -1,0 +1,9 @@
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+* {
+  max-width: 100%;
+}
