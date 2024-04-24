@@ -7,3 +7,32 @@ ol {
 * {
   max-width: 100%;
 }
+
+.background-gray {
+  background-color: #323844;
+}
+.background-darkgray {
+  background-color: #252a33;
+}
+.orange {
+  color: #ec4858;
+}
+
+.gray {
+  color: #7d7b8d;
+}
+
+.lightgray {
+  color: #7d7b7a;
+}
+
+.container-big {
+  max-width: 1890px;
+  margin: 0 auto;
+}
+
+.container-middle {
+  color: white;
+  margin: 0 auto;
+  width: 1200px;
+}

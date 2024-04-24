@@ -6,6 +6,12 @@ export default {
     UntoldStories,
     OffCanvas,
   },
+  props: {
+    menu: {
+      type: Array,
+      required: true,
+    },
+  },
 
   data() {
     return {};
@@ -25,14 +31,7 @@ export default {
             alt="nessuna immagine trovata"
             class="col-auto"
           />
-          <OffCanvas
-            one="Home"
-            two="Meet The Band"
-            three="Live Dates"
-            four="Latest News"
-            five="Albums"
-            six="Fans"
-          />
+          <OffCanvas :items="menu" />
         </div>
       </div>
     </header>
@@ -43,11 +42,6 @@ export default {
 <style scoped>
 * {
   color: white;
-}
-
-.container-big {
-  max-width: 1890px;
-  margin: 0 auto;
 }
 
 .container-header > .row > img {

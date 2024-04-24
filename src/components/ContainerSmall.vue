@@ -1,14 +1,13 @@
 <template>
-  <div :class="backgroundClass">
+  <div :class="prop.backgroundClass" class="height250">
     <div
       class="d-flex flex-column justify-content-center align-items-center container-small"
     >
-      <span v-if="enabled === true" class="barra"></span>
+      <span v-if="prop.enabled" class="barra"></span>
       <div class="d-flex flex-column justify-content-center align-items-center">
-        <h1>{{ title }}</h1>
-        +
+        <h1>{{ prop.title }}</h1>
         <span class="barra-sottile mb-4"></span>
-        <p>{{ paragraph }}</p>
+        <p>{{ prop.paragraph }}</p>
       </div>
     </div>
   </div>
@@ -17,17 +16,9 @@
 <script>
 export default {
   props: {
-    title: {
-      type: String,
-    },
-    paragraph: {
-      type: String,
-    },
-    enabled: {
-      type: Boolean,
-    },
-    backgroundClass: {
-      type: String,
+    prop: {
+      type: Object,
+      required: true,
     },
   },
 };
@@ -51,6 +42,8 @@ div.d-flex {
 
 h1 {
   color: white;
+  font-weight: 700;
+  font-size: 50px;
 }
 
 p {
@@ -61,15 +54,10 @@ p {
 .barra-sottile {
   border-top: 0.5px solid #444e62;
   width: 180px;
-  margin-top: -15px;
+  margin-top: 10px;
 }
 
-.background-gray {
-  background-color: #323844;
-  height: 250px;
-}
-.background-darkgray {
-  background-color: #252a33;
+.height250 {
   height: 250px;
 }
 </style>

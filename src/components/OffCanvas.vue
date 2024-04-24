@@ -32,12 +32,9 @@
     <div class="offcanvas-body">
       <div class="d-flex justify-content-center align-items-center">
         <ul>
-          <li href="#">{{ one }}</li>
-          <li href="#">{{ two }}</li>
-          <li href="#">{{ three }}</li>
-          <li href="#">{{ four }}</li>
-          <li href="#">{{ five }}</li>
-          <li href="#">{{ six }}</li>
+          <li v-for="(item, index) in items" :key="index">
+            <a :href="'#'">{{ item }}</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -46,7 +43,9 @@
 
 <script>
 export default {
-  props: ["one", "two", "three", "four", "five", "six"],
+  props: {
+    items: Array,
+  },
 };
 </script>
 
