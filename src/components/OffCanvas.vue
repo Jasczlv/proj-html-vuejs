@@ -75,4 +75,9 @@ li:hover {
 .offcanvas.offcanvas-top {
   background-color: #ec4858;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
 </style>

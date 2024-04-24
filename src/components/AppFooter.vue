@@ -12,9 +12,9 @@
           alt="nessuna immagine trovata"
         />
 
-        <ul class="d-flex gap-3">
+        <ul class="d-flex gap-3 lightgray">
           <li v-for="item in menu">
-            <a href="#">{{ item }}</a>
+            <a class="lightgray" href="#">{{ item }}</a>
           </li>
         </ul>
       </div>
@@ -22,7 +22,7 @@
       <div
         class="background-darkgray d-flex justify-content-center align-items-center justify-content-between p-5"
       >
-        <div class="d-flex gap-3">
+        <div class="d-flex gap-3 lightgray">
           <span>@ Copyright 2012 - 2020</span>
           <span>|</span>
           <span> AVADA THEME BY THEMEFUSION</span>
@@ -31,7 +31,20 @@
           <span>|</span>
           <span> POWERED BY WORDPRESS</span>
         </div>
-        <div></div>
+        <div class="d-flex gap-3 lightgray fs-5">
+          <a class="lightgray" href="www.facebook.com"
+            ><font-awesome-icon icon="fa-brands fa-facebook-f"
+          /></a>
+          <a class="lightgray" href="#"
+            ><font-awesome-icon icon="fa-brands fa-twitter"
+          /></a>
+          <a class="lightgray" href="#"
+            ><font-awesome-icon icon="fa-brands fa-instagram"
+          /></a>
+          <a class="lightgray" href="#"
+            ><font-awesome-icon icon="fa-brands fa-youtube"
+          /></a>
+        </div>
       </div>
     </div>
   </footer>
@@ -58,16 +71,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-* {
-  color: white;
-}
-
 .container-footer {
   width: 100%;
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container-footer > .row > img {
   height: 50px;
+}
+
+svg {
+  background-color: #323844;
+  border-radius: 5px;
+  padding: 8px;
+  aspect-ratio: 1;
+}
+
+a:hover {
+  color: white;
 }
 </style>

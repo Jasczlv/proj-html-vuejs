@@ -229,7 +229,7 @@ div.background-darkgray {
 
 .accordion-item {
   border-bottom: none;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .accordion-button,
